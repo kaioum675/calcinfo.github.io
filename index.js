@@ -1,5 +1,4 @@
 
-Kaioum, [23/01/2026 17:29]
 function crid(tt, cr, y) {
     return (tt >= 10) ? cr : y;
 }
