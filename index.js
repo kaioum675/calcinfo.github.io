@@ -1,5 +1,7 @@
+// index.js — مصحح ومُنقح
 
 function crid(tt, cr, y) {
+    // إذا كانت العلامة >= 10 رجع قيمة credit وإلا رجع y
     return (tt >= 10) ? cr : y;
 }
 
@@ -22,10 +24,10 @@ function calcu() {
     var rdmtt = (rdmtd * 0.4) + (rdmctrl * 0.6);
     document.getElementById('rdmtt').value = rdmtt.toFixed(2);
 
-    // 4. MDS (60% Exam, 20% TD, 20% TP)
+    // 4. MDS (20% TD, 60% Controle, 20% TP)
     var mdstd = Number(document.getElementById('mdstd').value) || 0;
     var mdsctrl = Number(document.getElementById('mdsctrl').value) || 0;
-    var mdstp = Number(document.getElementById('mdstp').value) || 0; // تم تصحيح الاسم هنا
+    var mdstp = Number(document.getElementById('mdstp').value) || 0;
     var mdstt = (mdstd * 0.2) + (mdsctrl * 0.6) + (mdstp * 0.2);
     document.getElementById('mdstt').value = mdstt.toFixed(2);
 
@@ -35,19 +37,19 @@ function calcu() {
     var topott = (topotp * 0.4) + (topoctrl * 0.6);
     document.getElementById('topott').value = topott.toFixed(2);
 
-    // 6. المواد الأخرى
+    // 6. مواد أخرى بدون حساب مركب (ادخال مباشر)
     var pgctt = Number(document.getElementById('pgctt').value) || 0;
     var dessintt = Number(document.getElementById('dessintt').value) || 0;
     var anglaistt = Number(document.getElementById('anglaistt').value) || 0;
     var geott = Number(document.getElementById('geott').value) || 0;
 
-    // 7. MDC
+    // 7. MDC (مثال: 40% TP , 60% Controle حسب ما في الصفحة)
     var mdctp = Number(document.getElementById('mdctp').value) || 0;
     var mdctrl = Number(document.getElementById('mdctrl').value) || 0;
     var mdctt = (mdctp * 0.4) + (mdctrl * 0.6);
     document.getElementById('mdctt').value = mdctt.toFixed(2);
 
-    // 8. حساب المعدل العام (تم تصحيح أسماء المتغيرات هنا)
+    // 8. حساب المعدل النهائي — الأوزان كما في ملفك الأصلي، المقسوم على 19 ككل
     var somme = (hydtt * 2) + (batt * 2) + (rdmtt * 2) + (mdstt * 3) + (topott * 2) + (pgctt * 1) + (dessintt * 3) + (anglaistt * 1) + (mdctt * 2) + (geott * 1);
     var moyenneFinale = somme / 19;
 
