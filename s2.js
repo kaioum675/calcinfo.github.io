@@ -8,11 +8,9 @@ if (tt> 10) {
   
 }
 function calcu() {
-  var hydtd = Number(document.getElementById('hydtd').value) ;
-  var hydctrl = Number(document.getElementById('hydctrl').value);
-   var hydtt = document.getElementById('hydtt').value =  Number((hydtd)*0.4+(hydctrl*0.6));
-  
-  
+    var hydtd = Number(document.getElementById('hydtd').value) ;
+    var hydctrl = Number(document.getElementById('hydctrl').value);
+    var hydtt = document.getElementById('hydtt').value =  Number((hydtd)*0.4+(hydctrl*0.6));
   
     var batd = Number(document.getElementById('batd').value) ;
     var bactrl = Number(document.getElementById('bactrl').value);
@@ -48,16 +46,7 @@ function calcu() {
     var geott = Number(document.getElementById('geott').value);
 
 
-  var trancr= document.getElementById('trancr').innerHTML = crid(tran,3,0);
-var deco= document.getElementById("deco").innerHTML = ((codtt*2)+(algott*3))/5;
-
-  var decocr= document.getElementById('decocr').innerHTML = crid(deco,9,0);
-
-
-
-
-       var toto= document.getElementById('toto').innerHTML = Number((deco*5+metodo*3+tran*3+fund*5)/16);
-  var ttcr= document.getElementById('ttcr').innerHTML = crid(toto,30,(trancr+decocr+metodocr+fundcr));
+    var toto= document.getElementById('toto').innerHTML = Number((hydtt*2+batt*2+rdm*2+mdstt*3+topott*2+pgctt+dessintt*3+anglaistt+mdc*2+geott)/19);
 
 
 
