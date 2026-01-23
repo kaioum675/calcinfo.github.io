@@ -8,59 +8,36 @@ if (tt> 10) {
   
 }
 function calcu() {
-  var probtd = Number(document.getElementById('hydtd').value) ;
-
- 
-
-  var probctrl = Number(document.getElementById('hydctrl').value);
-
-   var probtt = document.getElementById('hydtt').value =  Number((hydtd)*0.4+(hydctrl*0.6));
-  var algotd = Number(document.getElementById('batd').value) ;
-
- 
-
-  var algoctrl = Number(document.getElementById('bactrl').value);
- 
-  var algott = document.getElementById('batt').value =  Number((batd)*0.4+(bactrl*0.6));
-
-    var alg1ntd = Number(document.getElementById('rdmtd').value) ;
-
-   
-
-    var alg1ctrl = Number(document.getElementById('rdmctrl').value);
-
-    var alg1tt = document.getElementById('rdmtt').value = Number((((rdmtd)*0.4)+(rdmctrl*0.6)));
-
-
- 
-
-
-
-
-    var ana1ntd = Number(document.getElementById('mdstd').value) ;
-
-   
-
-    var ana1ctrl = Number(document.getElementById('mdsctrl').value);
-    var ana1ntd = Number(document.getElementById('mdstp').value) ;
-
-    var ana1tt = document.getElementById('mdstt').value = Number((mdstd*0.2)+(mdsctrl*0.6)+(mdstp*0.2));
-
-
-  var tictt = Number(document.getElementById('topotp').value);
-    var ipotp = Number(document.getElementById('topoctrl').value) ;
-
-    var ipott = document.getElementById('topott').value = Number((((topotp)*0.4)+(topoctrl*0.6)));
-
-    var electd = Number(document.getElementById('pgctt').value) ;
-
-
-
-
-    var electrl = Number(document.getElementById('dessintt').value);
-
+  var hydtd = Number(document.getElementById('hydtd').value) ;
+  var hydctrl = Number(document.getElementById('hydctrl').value);
+   var hydtt = document.getElementById('hydtt').value =  Number((hydtd)*0.4+(hydctrl*0.6));
   
-var codtd = Number(document.getElementById('anglaistt').value) ;
+  
+  
+    var batd = Number(document.getElementById('batd').value) ;
+    var bactrl = Number(document.getElementById('bactrl').value);
+    var batt = document.getElementById('batt').value =  Number((batd)*0.4+(bactrl*0.6));
+
+    var rdmtd = Number(document.getElementById('rdmtd').value) ;
+    var rdmctrl = Number(document.getElementById('rdmctrl').value);
+    var rdmtt = document.getElementById('rdmtt').value = Number((((rdmtd)*0.4)+(rdmctrl*0.6)));
+
+
+    var mdstd = Number(document.getElementById('mdstd').value) ;
+    var mdsctrl = Number(document.getElementById('mdsctrl').value);
+    var msdtp = Number(document.getElementById('mdstp').value) ;
+    var mdstt = document.getElementById('mdstt').value = Number((mdstd*0.2)+(mdsctrl*0.6)+(mdstp*0.2));
+
+
+    var topotp = Number(document.getElementById('topotp').value);
+    var topoctrl = Number(document.getElementById('topoctrl').value) ;
+    var topott = document.getElementById('topott').value = Number((((topotp)*0.4)+(topoctrl*0.6)));
+
+    var pgctt = Number(document.getElementById('pgctt').value) ;
+  
+    var dessintt = Number(document.getElementById('dessintt').value);
+
+    var anglaistt = Number(document.getElementById('anglaistt').value) ;
 
   
 
