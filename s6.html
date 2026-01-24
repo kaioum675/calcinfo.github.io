@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+
+  <head>
+
+     <link rel="icon" type="image/x-icon" href="ico.ico">
+
+    <meta charset="utf-8">
+
+    <title>Semester 5</title>
+
+    <!-- CSS only -->
+
+    <script src="jquery.min.js"></script>
+   
+
+<link href="bootstrap.min.css" rel="stylesheet">
+
+<!-- JavaScript Bundle with Popper -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="bootstrap.bundle.min.js"></script>
+
+<script language="JavaScript" type="text/javascript" src="s6.js"></script>
+
+  </head>
+
+  <body>
+	
+ <center>
+<!-- Image and text -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+ <img  src="logo.png">
+   
+ <a style=" border-radius: 15px;" href="index.html"><b>S5</b></a>
+ <a style=" border-radius: 15px;" href="s7.html"><b>S7</b></a>
+    <a style=" border-radius: 15px;" href="s8.html"><b>S8</b></a>
+
+
+      
+  
+</nav>
+
+ </center>
+
+
+
+
+
+
+                    <table class="table table-dark table-borderless mb-0 table-responsive" class="thegrid"  >
+
+                      <thead>
+
+                        <tr>
+
+                          <th scope="col">la matiere</th>
+
+                          <th scope="col">la note td/20</th>
+
+                      
+
+                          <th scope="col">Controle</th>
+
+                          <th scope="col">Note TP</th>
+
+                        
+
+                            <th scope="col">la moyenne</th>
+
+                        </tr>
+
+                      </thead>
+
+                      <tbody>
+
+                    
+                   
+
+                        <tr>
+
+                          <th scope="row">Hydrolique 2</th>
+
+                        <td>
+
+                          <input type="number" class="form-control" placeholder="Note TD /20" onkeyup="calcu()" id="hydtd" >
+
+                        </td>
+
+
+                        <td>
+
+                          <input type="number" class="form-control" placeholder="Control /20" onkeyup="calcu()"  id="hydctrl">
+
+                        </td>
+
+                        <td>
+
+                         
+
+                        </td>
+
+                  
+
+                        <td>
+
+                           <input type="text" class="form-control" placeholder="Total Hyd" id="hydtt" readonly>
+
+                        </td>
+
+                        </tr>
+
+                        <tr>
+
+                          <th scope="row">Beton Arme 2</th>
+
+                        <td>
+
+                          <input type="number" class="form-control" placeholder="Note TD /20" onkeyup="calcu()" id="batd" >
+
+                        </td>
+
+                    
+
+                        <td>
+
+                          <input type="number" class="form-control" placeholder="Control /20" onkeyup="calcu()"  id="bactrl">
+
+                        </td>
+
+                        <td>
+
+                         
+
+                        </td>
+
+                    
+
+                        <td>
+
+                           <input type="number" class="form-control" placeholder="Total BA" onkeyup="calcu()" id="batt">
+
+                        </td>
+
+                        </tr>
+                         <tr>
+
+                          <th scope="row">RDM3</th>
+
+                        <td>
+
+                          <input type="number" class="form-control" placeholder="Note TD /20" onkeyup="calcu()" id="rdmtd" >
+
+                        </td>
+
+                     
+
+                        <td>
+
+                          <input type="number" class="form-control" placeholder="Control /20" onkeyup="calcu()"  id="rdmctrl">
+
+                        </td>
+
+                        <td>
+
+                         
+
+                        </td>
+
+                     
+
+                        <td>
+
+                           <input type="number" class="form-control" placeholder="Total rdm3"  id="rdmtt" reaonly>
+
+                        </td>
+
+                        </tr>
+<tr >
+
+                          
+                        </td>
+
+                        <td style="background-color:white; ">
+
+                       
+
+                        </td>
+
+                        <td style="background-color:white; ">
+
+                          
+
+                        </td>
+
+                        <td style="background-color:white; " >
+
+                      
+
+                        </td>
+
+                        </tr>
+
+ <tr>
+
+                          <th scope="row">MDSol 2</th>
+
+                        <td>
+
+                          <input type="number" class="form-control" placeholder="Note TD /20" onkeyup="calcu()" id="mdstd" >
+
+                        </td>
+
+                  
+
+                        <td>
+
+                          <input type="number" class="form-control" placeholder="Control /20" onkeyup="calcu()"  id="mdsctrl">
+
+                        </td>
+
+                        <td>
+
+                          <input type="number" class="form-control" placeholder="Note TP /20" onkeyup="calcu()"  id="mdstp">
+
+                        </td>
+
+                     
+
+                        <td>
+
+                           <input type="number" class="form-control" placeholder="Total MDSol"  id="mdstt"  readonly>
+
+                        </td>
+
+                        </tr>
+
+                        
+
+ <tr>
+
+                          <th scope="row">Topo 2</th>
+
+                        <td>
+
+                          <input type="number" class="form-control" placeholder="Note TP /20" onkeyup="calcu()" id="topotp" >
+
+                        </td>
+
+                     
+
+                        <td>
+
+                          <input type="number" class="form-control" placeholder="Control /20" onkeyup="calcu()"  id="topoctrl">
+
+                        </td>
+
+                        <td>
+
+                         
+
+                        </td>
+
+                     
+
+                        <td>
+
+                           <input type="number" class="form-control" placeholder="Total Topo"  id="topott" readonly>
+
+                        </td>
+
+                        </tr>
+
+<tr >
+                   
+
+                        </td>
+
+                        <td style="background-color:white; ">
+
+                       
+
+                        </td>
+
+                        <td style="background-color:white; ">
+
+                          
+
+                        </td>
+
+                        <td style="background-color:white;  " >
+
+                         
+
+                        </td>
+
+                        </tr>
+
+
+ <tr>
+
+                          <th scope="row">EME</th>
+
+                        <td>
+
+                           
+
+                        </td>
+
+                        <td>
+
+                           
+
+                        </td>
+
+                        <td>
+
+                           
+
+                        </td>
+
+                  
+
+                        <td>
+
+                           <input type="number" class="form-control" placeholder="Note EME/20" onkeyup="calcu()" id="pgctt">
+
+                        </td>
+
+                        </tr>
+                       
+    <tr>
+
+                          <th scope="row">DAO 1</th>
+
+                        <td>
+
+                           
+
+                        </td>
+
+                        <td>
+
+                            
+
+                        </td>
+
+                        <td>
+                            
+                           
+
+                        </td>
+
+                  
+
+                        <td>
+
+                           <input type="number" class="form-control" placeholder="note Dessin /20" onkeyup="calcu()" id="dessintt">
+
+                        </td>
+
+                        </tr>
+<tr >
+
+
+                        <b style="text-color:blue;">credit:</b>
+
+                          <span type="number"  id="metodocr"></span>
+
+                        </td  >
+
+                        <td style="background-color:white; ">
+
+                          
+
+                        </td>
+
+                        <td style="background-color:white;  " >
+
+                        </td>
+
+                        </tr>
+ <tr>
+
+                          <th scope="row">Stage en enterprise</th>
+
+                        <td>
+
+                           
+
+                        </td>
+
+                        <td>
+
+                           
+
+                        </td>
+
+                        <td>
+
+                           
+
+                        </td>
+
+                  
+
+                        <td>
+
+                           <input type="number" class="form-control" placeholder="note Stage /20" onkeyup="calcu()" id="anglaistt">
+
+                        </td>
+
+                        </tr>
+                       
+    <tr>
+
+                          <th scope="row">MDC2</th>
+
+                        <td>
+                            <input type="number" class="form-control" placeholder="note tp /20" onkeyup="calcu()" id="mdctp" >
+							
+                       </td>
+
+                       <td>
+                            <input type="number" class="form-control" placeholder="control /20" onkeyup="calcu()" id="mdctrl" >
+                        </td>
+
+                        <td>
+
+                           
+
+                        </td>
+
+                  
+
+                        <td>
+
+                           <input type="number" class="form-control" placeholder="note MDC 2 /20"  id="mdctt" onlyread>
+
+                        </td>
+
+                        </tr>
+						  <tr>
+
+                          <th scope="row">Transfer thermique</th>
+
+                        <td>
+  
+
+                       </td>
+
+
+                       <td>
+                                                
+
+                        </td>
+
+                        <td>
+
+
+                        </td>                  
+
+                        <td>
+
+                           <input type="number" class="form-control" placeholder="note Geologie /20" onkeyup="calcu()" id="geott">
+
+                        </td>
+
+                        </tr>
+<tr >
+
+
+                        </td  >
+
+                        <td style="background-color:white; ">
+
+                          
+
+                        </td>
+
+                        <td style="background-color:white;  " >
+
+                        </td>
+
+                        </tr>
+   
+
+                         
+<tr >
+
+                          <th  scope="row" style="background-color:#5FBDFF; ">total</th>
+
+
+                        <td style="background-color:#5FBDFF;  ">
+
+                    <b style="text-color:blue;">la note est:</b>
+
+                          <span type="number"  id="toto"></span>
+
+                        </td>
+
+
+                        <td style="background-color:white; ">
+
+                          
+
+                        </td>
+
+                        <td style="background-color:white;  " >
+
+
+
+                        </td>
+
+                        </tr>
+
+
+                      </tbody>
+
+                    </table>
+
+
+
+
+
+<footer class="bg-dark text-center text-lg-start">
+  
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);color:#5FBDFF;">
+    by: Kaioum
+  </div>
+
+</footer>
+
+<style>
+.navbar {
+    padding: 0.5rem 1rem; /* Adjust the padding as needed */
+}
+
+.navbar img {
+    max-height: 50px; /* Adjust the image height */
+}
+
+.navbar a {
+    padding: 0.25rem 0.5rem; /* Adjust the link padding */
+    font-size: 0.9rem; /* Adjust the font size */
+}
+a:link, a:visited {
+  background-color: #f8f9fa;
+  color: black;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration:  ;
+  display: inline-block;
+}
+
+
+.mynav{
+padding: 10px;
+border-color: #f8f9fa;
+margin: auto;
+}
+.WebContainer{
+
+    width:100%;
+
+    min-width:1000px;
+
+    height:auto;
+
+}
+
+@media
+
+only screen and (max-width: 760px),
+
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+
+
+	/* Force table to not be like tables anymore */
+
+	table, thead, tbody, th, td, tr {
+
+		display: block;
+
+	}
+
+
+
+	/* Hide table headers (but not display:  ;, for accessibility) */
+
+	thead tr {
+
+		position: absolute;
+
+		top: -9999px;
+
+		left: -9999px;
+
+	}
+
+
+
+	tr { border: 1px solid #ccc; }
+
+
+
+	td {
+
+		/* Behave  like a "row" */
+
+		border:  ;
+
+		border-bottom: 1px solid #eee;
+
+		position: relative;
+
+		padding-left: 50%;
+
+    width:80%
+
+    margin:auto;
+
+    align-self: center;
+
+
+
+	}
+
+
+
+	td:before {
+
+		/* Now like a table header */
+
+		position: absolute;
+
+		/* Top/left values mimic padding */
+
+		top: 6px;
+
+		left: 6px;
+
+		width: 45%;
+
+		padding-right: 10px;
+
+		white-space: nowrap;
+
+	}
+
+
+
+
+
+html, body
+
+    {
+
+      -ms-content-zooming: ;
+
+      touch-action:  ;
+
+      content-zooming:  ;
+
+       // hide vertical
+
+    overflow-x: hidden;
+
+ // hide vertical
+
+    overflow-x:  ;
+
+    }rflow-style:  ;
+
+
+
+
+
+}
+
+
+
+}
+
+</style>
+
+</body>
+
+
+
+</html>
