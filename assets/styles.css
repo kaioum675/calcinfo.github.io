@@ -1,100 +1,130 @@
-/* تنسيقات عامة للجسم */
+/* 1. إعدادات الصفحة الأساسية والخلفية البيضاء */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f9;
-    direction: rtl; /* ليتناسب مع اللغة العربية */
+    background-color: white; /* خلفية بيضاء تماماً كما طلبت */
+    margin: 0;
     padding: 20px;
+    direction: rtl;
     color: #333;
 }
 
-/* تحويل الحاوية إلى شكل منظم */
+/* 2. الحاوية الرئيسية (الصندوق الأبيض في الوسط) */
 .container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 20px auto; /* توسيط الحاوية */
     background: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 30px;
+    border-radius: 16px;
+    /* ظل ناعم وملون قليلاً لبروز المحتوى عن الخلفية البيضاء */
+    box-shadow: 0 10px 40px rgba(52, 152, 219, 0.1);
+    border: 1px solid #f0f2f5;
 }
 
-/* تنسيق العناوين */
+/* 3. تنسيق العناوين بألوان مميزة */
 h2 {
-    color: #2c3e50;
+    color: #2c3e50; /* لون أزرق غامق */
     text-align: center;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
+    /* خط سفلي متدرج الألوان */
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #eee;
 }
 
-/* تنسيق صفوف المواد (تحويلها لبطاقات صغيرة) */
+/* النص التوضيحي الصغير */
+p.hint {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+/* 4. تنسيق بطاقات المواد (صفوف ملونة) */
 .subject-row {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     background: #fff;
-    border: 1px solid #eee;
-    margin-bottom: 10px;
+    border: 2px solid #f0f2f5;
+    /* إضافة شريط لوني جانبي لكل مادة لتمييزها */
+    border-right: 5px solid #3498db; 
+    margin-bottom: 15px;
     padding: 15px;
-    border-radius: 8px;
-    transition: transform 0.2s;
+    border-radius: 10px;
+    transition: all 0.3s ease;
 }
 
+/* تأثير عند مرور الماوس على المادة */
 .subject-row:hover {
-    transform: scale(1.02);
-    border-color: #3498db;
+    transform: translateY(-5px); /* تحريك خفيف للأعلى */
+    border-color: #3498db; /* تغيير لون الحدود للأزرق */
+    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2); /* ظل أزرق */
 }
 
-/* تنسيق أسماء المواد */
+/* اسم المادة */
 .subject-name {
-    font-weight: bold;
+    font-weight: 700;
     width: 100%;
-    margin-bottom: 10px;
-    color: #2c3e50;
+    margin-bottom: 12px;
+    color: #34495e;
+    font-size: 1.1rem;
 }
 
-/* تنسيق حقول الإدخال */
+/* 5. تنسيق حقول الإدخال (Inputs) */
 input[type="number"], input[type="text"] {
-    width: 80px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 28%; /* عرض مناسب */
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
     text-align: center;
     outline: none;
+    font-size: 1rem;
+    transition: border-color 0.3s, background-color 0.3s;
 }
 
+/* تأثير التركيز عند الكتابة داخل الحقل */
 input:focus {
-    border-color: #3498db;
-    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    border-color: #3498db; /* لون الحدود يصبح أزرق */
+    background-color: #f9fcff; /* خلفية زرقاء فاتحة جداً */
 }
 
-/* تمييز خانة المعدل الفرعي */
+/* 6. تمييز حقل المعدل المحسوب */
 .average-box {
-    background-color: #e8f4fd;
+    background-color: #ebf5fb; /* خلفية زرقاء فاتحة ثابتة */
+    color: #2980b9; /* لون الخط أزرق غامق */
     font-weight: bold;
-    color: #2980b9;
-    border: none !important;
+    border: 2px solid #ebf5fb !important;
 }
 
-/* تنسيق النتيجة النهائية في الأسفل */
+/* 7. قسم النتيجة النهائية (الأكثر تلوناً) */
 .total-section {
-    margin-top: 20px;
-    padding: 20px;
-    background: #3498db;
+    margin-top: 35px;
+    padding: 25px;
+    /* خلفية متدرجة زرقاء جذابة */
+    background: linear-gradient(135deg, #3498db, #2980b9);
     color: white;
     text-align: center;
-    border-radius: 10px;
-    font-size: 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
 }
 
-.total-value {
-    font-size: 2rem;
+/* تنسيق الرقم الكبير للنتيجة */
+.total-section span.big-number {
+    font-size: 3rem;
     display: block;
-    font-weight: bold;
+    font-weight: 800;
+    margin-top: 10px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
-/* جعل التصميم متجاوب مع الهواتف */
-@media (max-width: 480px) {
-    input {
-        width: 60px;
-    }
+/* تذييل الصفحة */
+.footer-note {
+    text-align: center;
+    margin-top: 20px;
+    color: #95a5a6;
+    font-size: 0.9rem;
 }
