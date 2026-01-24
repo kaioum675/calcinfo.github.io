@@ -1,696 +1,147 @@
 <!DOCTYPE html>
-
 <html lang="en" dir="ltr">
-
-
-  <head>
-
-     <link rel="icon" type="image/x-icon" href="ico.ico">
-
-    <meta charset="utf-8">
-
-    <title>Semester 5</title>
-
-    <!-- CSS only -->
-
-    <script src="jquery.min.js"></script>
-   
-
-<link href="bootstrap.min.css" rel="stylesheet">
-
-<!-- JavaScript Bundle with Popper -->
-
+<head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<script src="bootstrap.bundle.min.js"></script>
-
-<script language="JavaScript" type="text/javascript" src="index.js"></script>
-
-  </head>
-
-  <body>
-	
- <center>
-<!-- Image and text -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
- <img  src="logo.png">
-   
- <a style=" border-radius: 15px;" href="s6.html"><b>S6</b></a>
- <a style=" border-radius: 15px;" href="s7.html"><b>S7</b></a>
-    <a style=" border-radius: 15px;" href="s8.html"><b>S8</b></a>
-
-
-      
-  
-</nav>
-
- </center>
-
-
-
-
-
-
-                    <table class="table table-dark table-borderless mb-0 table-responsive" class="thegrid"  >
-
-                      <thead>
-
-                        <tr>
-
-                          <th scope="col">la matiere</th>
-
-                          <th scope="col">la note td/20</th>
-
-                      
-
-                          <th scope="col">Controle</th>
-
-                          <th scope="col">Note TP</th>
-
-                        
-
-                            <th scope="col">la moyenne</th>
-
-                        </tr>
-
-                      </thead>
-
-                      <tbody>
-
-                    
-                   
-
-                        <tr>
-
-                          <th scope="row">Hydrolique 1</th>
-
-                        <td>
-
-                          <input type="number" class="form-control" placeholder="Note TD /20" onkeyup="calcu()" id="hydtd" >
-
-                        </td>
-
-
-                        <td>
-
-                          <input type="number" class="form-control" placeholder="Control /20" onkeyup="calcu()"  id="hydctrl">
-
-                        </td>
-
-                        <td>
-
-                         
-
-                        </td>
-
-                  
-
-                        <td>
-
-                           <input type="text" class="form-control" placeholder="Total Hyd" id="hydtt" readonly>
-
-                        </td>
-
-                        </tr>
-
-                        <tr>
-
-                          <th scope="row">Beton Arme</th>
-
-                        <td>
-
-                          <input type="number" class="form-control" placeholder="Note TD /20" onkeyup="calcu()" id="batd" >
-
-                        </td>
-
-                    
-
-                        <td>
-
-                          <input type="number" class="form-control" placeholder="Control /20" onkeyup="calcu()"  id="bactrl">
-
-                        </td>
-
-                        <td>
-
-                         
-
-                        </td>
-
-                    
-
-                        <td>
-
-                           <input type="number" class="form-control" placeholder="Total BA" onkeyup="calcu()" id="batt">
-
-                        </td>
-
-                        </tr>
-                         <tr>
-
-                          <th scope="row">RDM2</th>
-
-                        <td>
-
-                          <input type="number" class="form-control" placeholder="Note TD /20" onkeyup="calcu()" id="rdmtd" >
-
-                        </td>
-
-                     
-
-                        <td>
-
-                          <input type="number" class="form-control" placeholder="Control /20" onkeyup="calcu()"  id="rdmctrl">
-
-                        </td>
-
-                        <td>
-
-                         
-
-                        </td>
-
-                     
-
-                        <td>
-
-                           <input type="number" class="form-control" placeholder="Total RDM2"  id="rdmtt" reaonly>
-
-                        </td>
-
-                        </tr>
-<tr >
-
-                          
-                        </td>
-
-                        <td style="background-color:white; ">
-
-                       
-
-                        </td>
-
-                        <td style="background-color:white; ">
-
-                          
-
-                        </td>
-
-                        <td style="background-color:white; " >
-
-                      
-
-                        </td>
-
-                        </tr>
-
- <tr>
-
-                          <th scope="row">MDSol</th>
-
-                        <td>
-
-                          <input type="number" class="form-control" placeholder="Note TD /20" onkeyup="calcu()" id="mdstd" >
-
-                        </td>
-
-                  
-
-                        <td>
-
-                          <input type="number" class="form-control" placeholder="Control /20" onkeyup="calcu()"  id="mdsctrl">
-
-                        </td>
-
-                        <td>
-
-                          <input type="number" class="form-control" placeholder="Note TP /20" onkeyup="calcu()"  id="mdstp">
-
-                        </td>
-
-                     
-
-                        <td>
-
-                           <input type="number" class="form-control" placeholder="Total MDSol"  id="mdstt"  readonly>
-
-                        </td>
-
-                        </tr>
-
-                        
-
- <tr>
-
-                          <th scope="row">topo1</th>
-
-                        <td>
-
-                          <input type="number" class="form-control" placeholder="Note TP /20" onkeyup="calcu()" id="topotp" >
-
-                        </td>
-
-                     
-
-                        <td>
-
-                          <input type="number" class="form-control" placeholder="Control /20" onkeyup="calcu()"  id="topoctrl">
-
-                        </td>
-
-                        <td>
-
-                         
-
-                        </td>
-
-                     
-
-                        <td>
-
-                           <input type="number" class="form-control" placeholder="total topo"  id="topott" readonly>
-
-                        </td>
-
-                        </tr>
-
-<tr >
-                   
-
-                        </td>
-
-                        <td style="background-color:white; ">
-
-                       
-
-                        </td>
-
-                        <td style="background-color:white; ">
-
-                          
-
-                        </td>
-
-                        <td style="background-color:white;  " >
-
-                         
-
-                        </td>
-
-                        </tr>
-
-
- <tr>
-
-                          <th scope="row">PGC</th>
-
-                        <td>
-
-                           
-
-                        </td>
-
-                        <td>
-
-                           
-
-                        </td>
-
-                        <td>
-
-                           
-
-                        </td>
-
-                  
-
-                        <td>
-
-                           <input type="number" class="form-control" placeholder="note PGC /20" onkeyup="calcu()" id="pgctt">
-
-                        </td>
-
-                        </tr>
-                       
-    <tr>
-
-                          <th scope="row">dessin</th>
-
-                        <td>
-
-                           
-
-                        </td>
-
-                        <td>
-
-                            
-
-                        </td>
-
-                        <td>
-                            
-                           
-
-                        </td>
-
-                  
-
-                        <td>
-
-                           <input type="number" class="form-control" placeholder="note Dessin /20" onkeyup="calcu()" id="dessintt">
-
-                        </td>
-
-                        </tr>
-<tr >
-
-
-                        <b style="text-color:blue;">credit:</b>
-
-                          <span type="number"  id="metodocr"></span>
-
-                        </td  >
-
-                        <td style="background-color:white; ">
-
-                          
-
-                        </td>
-
-                        <td style="background-color:white;  " >
-
-                        </td>
-
-                        </tr>
- <tr>
-
-                          <th scope="row">Anglais</th>
-
-                        <td>
-
-                           
-
-                        </td>
-
-                        <td>
-
-                           
-
-                        </td>
-
-                        <td>
-
-                           
-
-                        </td>
-
-                  
-
-                        <td>
-
-                           <input type="number" class="form-control" placeholder="note Anglais /20" onkeyup="calcu()" id="anglaistt">
-
-                        </td>
-
-                        </tr>
-                       
-    <tr>
-
-                          <th scope="row">MDC1</th>
-
-                        <td>
-                            <input type="number" class="form-control" placeholder="note tp /20" onkeyup="calcu()" id="mdctp" >
-							
-                       </td>
-
-                       <td>
-                            <input type="number" class="form-control" placeholder="control /20" onkeyup="calcu()" id="mdctrl" >
-                        </td>
-
-                        <td>
-
-                           
-
-                        </td>
-
-                  
-
-                        <td>
-
-                           <input type="number" class="form-control" placeholder="note MDC1 /20"  id="mdctt" onlyread>
-
-                        </td>
-
-                        </tr>
-						  <tr>
-
-                          <th scope="row">Geologie</th>
-
-                        <td>
-  
-
-                       </td>
-
-
-                       <td>
-                                                
-
-                        </td>
-
-                        <td>
-
-
-                        </td>                  
-
-                        <td>
-
-                           <input type="number" class="form-control" placeholder="note Geologie /20" onkeyup="calcu()" id="geott">
-
-                        </td>
-
-                        </tr>
-<tr >
-
-
-                        </td  >
-
-                        <td style="background-color:white; ">
-
-                          
-
-                        </td>
-
-                        <td style="background-color:white;  " >
-
-                        </td>
-
-                        </tr>
-   
-
-                         
-<tr >
-
-                          <th  scope="row" style="background-color:#5FBDFF; ">total</th>
-
-
-                        <td style="background-color:#5FBDFF;  ">
-
-                    <b style="text-color:blue;">la note est:</b>
-
-                          <span type="number"  id="toto"></span>
-
-                        </td>
-
-
-                        <td style="background-color:white; ">
-
-                          
-
-                        </td>
-
-                        <td style="background-color:white;  " >
-
-
-
-                        </td>
-
-                        </tr>
-
-
-                      </tbody>
-
-                    </table>
-
-
-
-
-
-<footer class="bg-dark text-center text-lg-start">
-  
-  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);color:#5FBDFF;">
-    by: Kaioum
-  </div>
-
-</footer>
-
-<style>
-.navbar {
-    padding: 0.5rem 1rem; /* Adjust the padding as needed */
-}
-
-.navbar img {
-    max-height: 50px; /* Adjust the image height */
-}
-
-.navbar a {
-    padding: 0.25rem 0.5rem; /* Adjust the link padding */
-    font-size: 0.9rem; /* Adjust the font size */
-}
-a:link, a:visited {
-  background-color: #f8f9fa;
-  color: black;
-  padding: 15px 25px;
-  text-align: center;
-  text-decoration:  ;
-  display: inline-block;
-}
-
-
-.mynav{
-padding: 10px;
-border-color: #f8f9fa;
-margin: auto;
-}
-.WebContainer{
-
-    width:100%;
-
-    min-width:1000px;
-
-    height:auto;
-
-}
-
-@media
-
-only screen and (max-width: 760px),
-
-(min-device-width: 768px) and (max-device-width: 1024px)  {
-
-
-
-	/* Force table to not be like tables anymore */
-
-	table, thead, tbody, th, td, tr {
-
-		display: block;
-
-	}
-
-
-
-	/* Hide table headers (but not display:  ;, for accessibility) */
-
-	thead tr {
-
-		position: absolute;
-
-		top: -9999px;
-
-		left: -9999px;
-
-	}
-
-
-
-	tr { border: 1px solid #ccc; }
-
-
-
-	td {
-
-		/* Behave  like a "row" */
-
-		border:  ;
-
-		border-bottom: 1px solid #eee;
-
-		position: relative;
-
-		padding-left: 50%;
-
-    width:80%
-
-    margin:auto;
-
-    align-self: center;
-
-
-
-	}
-
-
-
-	td:before {
-
-		/* Now like a table header */
-
-		position: absolute;
-
-		/* Top/left values mimic padding */
-
-		top: 6px;
-
-		left: 6px;
-
-		width: 45%;
-
-		padding-right: 10px;
-
-		white-space: nowrap;
-
-	}
-
-
-
-
-
-html, body
-
-    {
-
-      -ms-content-zooming: ;
-
-      touch-action:  ;
-
-      content-zooming:  ;
-
-       // hide vertical
-
-    overflow-x: hidden;
-
- // hide vertical
-
-    overflow-x:  ;
-
-    }rflow-style:  ;
-
-
-
-
-
-}
-
-
-
-}
-
-</style>
-
+  <title>Semester 5 — CalcInfo</title>
+  <link rel="icon" type="image/x-icon" href="ico.ico">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="assets/styles.css" rel="stylesheet">
+</head>
+<body>
+  <header class="bg-dark text-white">
+    <nav class="container navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="logo.png" alt="logo" class="me-2 logo-img">
+        <strong>CalcInfo</strong>
+      </a>
+      <div class="ms-auto">
+        <a class="btn btn-outline-light btn-sm me-1" href="index.html"><b>S1</b></a>
+        <a class="btn btn-outline-light btn-sm me-1" href="s3.html"><b>S3</b></a>
+        <a class="btn btn-outline-light btn-sm" href="s4.html"><b>S4</b></a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container my-4">
+    <div class="card shadow-sm">
+      <div class="card-body">
+        <h3 class="card-title">Semester 5 — Calculator</h3>
+        <p class="text-muted">ادخل العلامات (0-20). الحقول المحسوبة تظهر تلقائياً.</p>
+
+        <div class="table-responsive">
+          <table class="table table-striped align-middle">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">المادة</th>
+                <th scope="col">Note TD /20</th>
+                <th scope="col">Controle /20</th>
+                <th scope="col">Note TP /20</th>
+                <th scope="col">La moyenne</th>
+              </tr>
+            </thead>
+            <tbody>
+
+              <tr>
+                <th scope="row">Hydraulique 1</th>
+                <td><input id="hydtd" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TD /20" oninput="calcu()"></td>
+                <td><input id="hydctrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Control /20" oninput="calcu()"></td>
+                <td>—</td>
+                <td><input id="hydtt" class="form-control fw-bold" readonly placeholder="Total Hyd"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Béton Armé</th>
+                <td><input id="batd" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TD /20" oninput="calcu()"></td>
+                <td><input id="bactrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Control /20" oninput="calcu()"></td>
+                <td>—</td>
+                <td><input id="batt" class="form-control fw-bold" readonly placeholder="Total BA"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">RDM2</th>
+                <td><input id="rdmtd" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TD /20" oninput="calcu()"></td>
+                <td><input id="rdmctrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Control /20" oninput="calcu()"></td>
+                <td>—</td>
+                <td><input id="rdmtt" class="form-control fw-bold" readonly placeholder="Total RDM2"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">MDSol</th>
+                <td><input id="mdstd" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TD /20" oninput="calcu()"></td>
+                <td><input id="mdsctrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Control /20" oninput="calcu()"></td>
+                <td><input id="mdstp" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TP /20" oninput="calcu()"></td>
+                <td><input id="mdstt" class="form-control fw-bold" readonly placeholder="Total MDSol"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Topo1</th>
+                <td>—</td>
+                <td><input id="topoctrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Control /20" oninput="calcu()"></td>
+                <td><input id="topotp" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TP /20" oninput="calcu()"></td>
+                <td><input id="topott" class="form-control fw-bold" readonly placeholder="Total Topo"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">PGC</th>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td><input id="pgctt" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="note PGC /20" oninput="calcu()"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Dessin</th>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td><input id="dessintt" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="note Dessin /20" oninput="calcu()"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Anglais</th>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td><input id="anglaistt" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="note Anglais /20" oninput="calcu()"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">MDC1</th>
+                <td><input id="mdctp" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="note TP /20" oninput="calcu()"></td>
+                <td><input id="mdctrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="control /20" oninput="calcu()"></td>
+                <td>—</td>
+                <td><input id="mdctt" class="form-control fw-bold" readonly placeholder="note MDC1 /20"></td>
+              </tr>
+
+              <tr>
+                <th scope="row">Géologie</th>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td><input id="geott" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="note Geologie /20" oninput="calcu()"></td>
+              </tr>
+
+              <tr class="table-info">
+                <th scope="row">Total</th>
+                <td colspan="3" class="align-middle">La note générale:</td>
+                <td><span id="toto" class="fs-4 fw-bold">0.00</span></td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="mt-3 text-center">
+      <small class="text-muted">by: Kaioum</small>
+    </div>
+  </main>
+
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.bundle.min.js"></script>
+  <script src="index.js"></script>
 </body>
-
-
-
 </html>
-

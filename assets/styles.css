@@ -1,0 +1,9 @@
+body { background: #f5f8fa; }
+.logo-img { height: 40px; }
+.card-title { margin-bottom: 0.25rem; }
+input[readonly] { background-color: #e9ecef; }
+.table-info { background-color: #e7f4ff; }
+
+@media (max-width: 768px) {
+  .logo-img { height: 32px; }
+}
