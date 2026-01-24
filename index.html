@@ -7,142 +7,188 @@
   <link rel="icon" type="image/x-icon" href="ico.ico">
   <link href="bootstrap.min.css" rel="stylesheet">
   <link href="assets/styles.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #f1f1f1;
+    }
+    .card {
+      background-color: #1e1e1e;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .subject {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .subject span {
+      min-width: 120px;
+      font-weight: bold;
+    }
+    .subject input {
+      flex: 1 1 100px;
+      max-width: 120px;
+      background-color: #2a2a2a;
+      color: #fff;
+      border: 1px solid #444;
+      border-radius: 6px;
+      padding: 4px 8px;
+      text-align: center;
+    }
+    .subject input:focus {
+      outline: none;
+      border-color: #0d6efd;
+      box-shadow: 0 0 5px #0d6efd;
+    }
+    .average {
+      font-weight: bold;
+      background-color: #333;
+    }
+    @media(max-width: 576px) {
+      .subject {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .subject span, .subject input {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-  <header class="bg-dark text-white">
-    <nav class="container navbar navbar-expand-lg navbar-dark">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="logo.png" alt="logo" class="me-2 logo-img">
-        <strong>CalcInfo</strong>
-      </a>
-      <div class="ms-auto">
-        <a class="btn btn-outline-light btn-sm me-1" href="index.html"><b>S1</b></a>
-        <a class="btn btn-outline-light btn-sm me-1" href="s3.html"><b>S3</b></a>
-        <a class="btn btn-outline-light btn-sm" href="s4.html"><b>S4</b></a>
-      </div>
-    </nav>
-  </header>
-
-  <main class="container my-4">
-    <div class="card shadow-sm">
-      <div class="card-body">
-        <h3 class="card-title">Semester 5 — Calculator</h3>
-        <p class="text-muted">ادخل العلامات (0-20). الحقول المحسوبة تظهر تلقائياً.</p>
-
-        <div class="table-responsive">
-          <table class="table table-striped align-middle">
-            <thead class="table-dark">
-              <tr>
-                <th scope="col">المادة</th>
-                <th scope="col">Note TD /20</th>
-                <th scope="col">Controle /20</th>
-                <th scope="col">Note TP /20</th>
-                <th scope="col">La moyenne</th>
-              </tr>
-            </thead>
-            <tbody>
-
-              <tr>
-                <th scope="row">Hydraulique 1</th>
-                <td><input id="hydtd" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TD /20" oninput="calcu()"></td>
-                <td><input id="hydctrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Control /20" oninput="calcu()"></td>
-                <td>—</td>
-                <td><input id="hydtt" class="form-control fw-bold" readonly placeholder="Total Hyd"></td>
-              </tr>
-
-              <tr>
-                <th scope="row">Béton Armé</th>
-                <td><input id="batd" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TD /20" oninput="calcu()"></td>
-                <td><input id="bactrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Control /20" oninput="calcu()"></td>
-                <td>—</td>
-                <td><input id="batt" class="form-control fw-bold" readonly placeholder="Total BA"></td>
-              </tr>
-
-              <tr>
-                <th scope="row">RDM2</th>
-                <td><input id="rdmtd" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TD /20" oninput="calcu()"></td>
-                <td><input id="rdmctrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Control /20" oninput="calcu()"></td>
-                <td>—</td>
-                <td><input id="rdmtt" class="form-control fw-bold" readonly placeholder="Total RDM2"></td>
-              </tr>
-
-              <tr>
-                <th scope="row">MDSol</th>
-                <td><input id="mdstd" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TD /20" oninput="calcu()"></td>
-                <td><input id="mdsctrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Control /20" oninput="calcu()"></td>
-                <td><input id="mdstp" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TP /20" oninput="calcu()"></td>
-                <td><input id="mdstt" class="form-control fw-bold" readonly placeholder="Total MDSol"></td>
-              </tr>
-
-              <tr>
-                <th scope="row">Topo1</th>
-                <td>—</td>
-                <td><input id="topoctrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Control /20" oninput="calcu()"></td>
-                <td><input id="topotp" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="Note TP /20" oninput="calcu()"></td>
-                <td><input id="topott" class="form-control fw-bold" readonly placeholder="Total Topo"></td>
-              </tr>
-
-              <tr>
-                <th scope="row">PGC</th>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td><input id="pgctt" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="note PGC /20" oninput="calcu()"></td>
-              </tr>
-
-              <tr>
-                <th scope="row">Dessin</th>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td><input id="dessintt" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="note Dessin /20" oninput="calcu()"></td>
-              </tr>
-
-              <tr>
-                <th scope="row">Anglais</th>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td><input id="anglaistt" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="note Anglais /20" oninput="calcu()"></td>
-              </tr>
-
-              <tr>
-                <th scope="row">MDC1</th>
-                <td><input id="mdctp" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="note TP /20" oninput="calcu()"></td>
-                <td><input id="mdctrl" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="control /20" oninput="calcu()"></td>
-                <td>—</td>
-                <td><input id="mdctt" class="form-control fw-bold" readonly placeholder="note MDC1 /20"></td>
-              </tr>
-
-              <tr>
-                <th scope="row">Géologie</th>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td><input id="geott" type="number" min="0" max="20" step="0.01" class="form-control" placeholder="note Geologie /20" oninput="calcu()"></td>
-              </tr>
-
-              <tr class="table-info">
-                <th scope="row">Total</th>
-                <td colspan="3" class="align-middle">La note générale:</td>
-                <td><span id="toto" class="fs-4 fw-bold">0.00</span></td>
-              </tr>
-
-            </tbody>
-          </table>
+    <header class="bg-dark text-white">
+      <nav class="container navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="logo.png" alt="logo" class="me-2 logo-img">
+          <strong>CalcInfo</strong>
+        </a>
+        <div class="ms-auto">
+          <a class="btn btn-outline-light btn-sm me-1" href="index.html"><b>S1</b></a>
+          <a class="btn btn-outline-light btn-sm me-1" href="s3.html"><b>S3</b></a>
+          <a class="btn btn-outline-light btn-sm" href="s4.html"><b>S4</b></a>
         </div>
+      </nav>
+    </header>
 
+    <main class="container my-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title">Semester 5 — Calculator</h3>
+          <p class="text-muted">ادخل العلامات (0-20). الحقول المحسوبة تظهر تلقائياً.</p>
+
+          <!-- Hydraulique 1 -->
+          <div class="card">
+            <div class="subject">
+              <span>Hydraulique 1</span>
+              <input id="hydtd" type="number" min="0" max="20" step="0.01" placeholder="Note TD /20" oninput="calcu()">
+              <input id="hydctrl" type="number" min="0" max="20" step="0.01" placeholder="Control /20" oninput="calcu()">
+              <input id="hydtt" class="average" readonly placeholder="Total Hyd">
+            </div>
+          </div>
+
+          <!-- Béton Armé -->
+          <div class="card">
+            <div class="subject">
+              <span>Béton Armé</span>
+              <input id="batd" type="number" min="0" max="20" step="0.01" placeholder="Note TD /20" oninput="calcu()">
+              <input id="bactrl" type="number" min="0" max="20" step="0.01" placeholder="Control /20" oninput="calcu()">
+              <input id="batt" class="average" readonly placeholder="Total BA">
+            </div>
+          </div>
+
+          <!-- RDM2 -->
+          <div class="card">
+            <div class="subject">
+              <span>RDM2</span>
+              <input id="rdmtd" type="number" min="0" max="20" step="0.01" placeholder="Note TD /20" oninput="calcu()">
+              <input id="rdmctrl" type="number" min="0" max="20" step="0.01" placeholder="Control /20" oninput="calcu()">
+              <input id="rdmtt" class="average" readonly placeholder="Total RDM2">
+            </div>
+          </div>
+
+          <!-- MDSol -->
+          <div class="card">
+            <div class="subject">
+
+<span>MDSol</span>
+              <input id="mdstd" type="number" min="0" max="20" step="0.01" placeholder="Note TD /20" oninput="calcu()">
+              <input id="mdsctrl" type="number" min="0" max="20" step="0.01" placeholder="Control /20" oninput="calcu()">
+              <input id="mdstp" type="number" min="0" max="20" step="0.01" placeholder="Note TP /20" oninput="calcu()">
+              <input id="mdstt" class="average" readonly placeholder="Total MDSol">
+            </div>
+          </div>
+
+          <!-- Topo1 -->
+          <div class="card">
+            <div class="subject">
+              <span>Topo1</span>
+              <input id="topoctrl" type="number" min="0" max="20" step="0.01" placeholder="Control /20" oninput="calcu()">
+              <input id="topotp" type="number" min="0" max="20" step="0.01" placeholder="Note TP /20" oninput="calcu()">
+              <input id="topott" class="average" readonly placeholder="Total Topo">
+            </div>
+          </div>
+
+          <!-- PGC -->
+          <div class="card">
+            <div class="subject">
+              <span>PGC</span>
+              <input id="pgctt" type="number" min="0" max="20" step="0.01" placeholder="note PGC /20" oninput="calcu()">
+            </div>
+          </div>
+
+          <!-- Dessin -->
+          <div class="card">
+            <div class="subject">
+              <span>Dessin</span>
+              <input id="dessintt" type="number" min="0" max="20" step="0.01" placeholder="note Dessin /20" oninput="calcu()">
+            </div>
+          </div>
+
+          <!-- Anglais -->
+          <div class="card">
+            <div class="subject">
+              <span>Anglais</span>
+              <input id="anglaistt" type="number" min="0" max="20" step="0.01" placeholder="note Anglais /20" oninput="calcu()">
+            </div>
+          </div>
+
+          <!-- MDC1 -->
+          <div class="card">
+            <div class="subject">
+              <span>MDC1</span>
+              <input id="mdctp" type="number" min="0" max="20" step="0.01" placeholder="note TP /20" oninput="calcu()">
+              <input id="mdctrl" type="number" min="0" max="20" step="0.01" placeholder="control /20" oninput="calcu()">
+              <input id="mdctt" class="average" readonly placeholder="note MDC1 /20">
+            </div>
+          </div>
+
+          <!-- Géologie -->
+          <div class="card">
+            <div class="subject">
+              <span>Géologie</span>
+              <input id="geott" type="number" min="0" max="20" step="0.01" placeholder="note Geologie /20" oninput="calcu()">
+            </div>
+          </div>
+
+          <!-- Total -->
+          <div class="card bg-primary text-white text-center">
+            <strong>La note générale: <span id="toto">0.00</span></strong>
+          </div>
+
+        </div>
       </div>
-    </div>
 
-    <div class="mt-3 text-center">
-      <small class="text-muted">by: Kaioum</small>
-    </div>
-  </main>
+      <div class="mt-3 text-center">
+        <small class="text-muted">by: Kaioum</small>
+      </div>
+    </main>
 
-  <script src="jquery.min.js"></script>
-  <script src="bootstrap.bundle.min.js"></script>
-  <script src="index.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
