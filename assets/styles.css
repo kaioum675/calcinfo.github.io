@@ -89,19 +89,19 @@ input:focus {
     margin-top: 10px;
 }
 .custom-square {
-    width: 42px !important;
-    height: 42px !important;
-    display: inline-flex !important;
+    width: 42px;
+    height: 42px;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: 15px !important; 
+    margin-left: 15px; 
     border-radius: 8px;
-    padding: 0 !important;
+    padding: 0;
     border: 1px solid #ffffff;
     transition: 0.3s; 
 }
 
 .custom-square:hover {
     background-color: #ffffff;
-    color: #121212 !important;
+    color: #121212;
 }
