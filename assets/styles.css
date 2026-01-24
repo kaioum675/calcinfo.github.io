@@ -1,130 +1,90 @@
-/* 1. إعدادات الصفحة الأساسية والخلفية البيضاء */
+/* ===== Global ===== */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: white; /* خلفية بيضاء تماماً كما طلبت */
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: #F1F5F9;
+    color: #0F172A;
     margin: 0;
-    padding: 20px;
-    direction: rtl;
-    color: #333;
+    padding: 0;
 }
 
-/* 2. الحاوية الرئيسية (الصندوق الأبيض في الوسط) */
+/* ===== Container ===== */
 .container {
-    max-width: 600px;
-    margin: 20px auto; /* توسيط الحاوية */
-    background: white;
-    padding: 30px;
-    border-radius: 16px;
-    /* ظل ناعم وملون قليلاً لبروز المحتوى عن الخلفية البيضاء */
-    box-shadow: 0 10px 40px rgba(52, 152, 219, 0.1);
-    border: 1px solid #f0f2f5;
+    max-width: 900px;
+    margin: auto;
+    padding: 16px;
 }
 
-/* 3. تنسيق العناوين بألوان مميزة */
-h2 {
-    color: #2c3e50; /* لون أزرق غامق */
+/* ===== Title ===== */
+h1, h2 {
     text-align: center;
-    /* خط سفلي متدرج الألوان */
-    background: linear-gradient(to right, #3498db, #2ecc71);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-    font-size: 1.8rem;
-    border-bottom: 2px solid #eee;
+    color: #2563EB;
+    margin-bottom: 10px;
 }
 
-/* النص التوضيحي الصغير */
-p.hint {
-    text-align: center;
-    color: #7f8c8d;
-    margin-bottom: 25px;
-    font-size: 0.95rem;
+/* ===== Card ===== */
+.card {
+    background: #FFFFFF;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
 }
 
-/* 4. تنسيق بطاقات المواد (صفوف ملونة) */
-.subject-row {
-    display: flex;
-    flex-wrap: wrap;
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* ===== Subject ===== */
+.subject {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 0.8fr;
+    gap: 8px;
     align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    border: 2px solid #f0f2f5;
-    /* إضافة شريط لوني جانبي لكل مادة لتمييزها */
-    border-right: 5px solid #3498db; 
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 10px;
-    transition: all 0.3s ease;
 }
 
-/* تأثير عند مرور الماوس على المادة */
-.subject-row:hover {
-    transform: translateY(-5px); /* تحريك خفيف للأعلى */
-    border-color: #3498db; /* تغيير لون الحدود للأزرق */
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.2); /* ظل أزرق */
+.subject span {
+    font-weight: 600;
+    color: #1E293B;
 }
 
-/* اسم المادة */
-.subject-name {
-    font-weight: 700;
+/* ===== Inputs ===== */
+input {
     width: 100%;
-    margin-bottom: 12px;
-    color: #34495e;
-    font-size: 1.1rem;
-}
-
-/* 5. تنسيق حقول الإدخال (Inputs) */
-input[type="number"], input[type="text"] {
-    width: 28%; /* عرض مناسب */
-    padding: 12px;
-    border: 2px solid #e0e0e0;
+    padding: 8px 10px;
     border-radius: 8px;
-    text-align: center;
-    outline: none;
-    font-size: 1rem;
-    transition: border-color 0.3s, background-color 0.3s;
+    border: 1px solid #CBD5E1;
+    font-size: 14px;
 }
 
-/* تأثير التركيز عند الكتابة داخل الحقل */
 input:focus {
-    border-color: #3498db; /* لون الحدود يصبح أزرق */
-    background-color: #f9fcff; /* خلفية زرقاء فاتحة جداً */
+    outline: none;
+    border-color: #2563EB;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
 }
 
-/* 6. تمييز حقل المعدل المحسوب */
-.average-box {
-    background-color: #ebf5fb; /* خلفية زرقاء فاتحة ثابتة */
-    color: #2980b9; /* لون الخط أزرق غامق */
+/* ===== Average ===== */
+.average {
     font-weight: bold;
-    border: 2px solid #ebf5fb !important;
+    color: #22C55E;
+    background: #F0FDF4;
 }
 
-/* 7. قسم النتيجة النهائية (الأكثر تلوناً) */
-.total-section {
-    margin-top: 35px;
-    padding: 25px;
-    /* خلفية متدرجة زرقاء جذابة */
-    background: linear-gradient(135deg, #3498db, #2980b9);
+/* ===== Total ===== */
+.total {
+    background: linear-gradient(135deg, #2563EB, #22C55E);
     color: white;
     text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+    font-size: 20px;
+    font-weight: bold;
+    padding: 18px;
+    border-radius: 16px;
 }
 
-/* تنسيق الرقم الكبير للنتيجة */
-.total-section span.big-number {
-    font-size: 3rem;
-    display: block;
-    font-weight: 800;
-    margin-top: 10px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
-/* تذييل الصفحة */
-.footer-note {
+/* ===== Footer ===== */
+.footer {
     text-align: center;
-    margin-top: 20px;
-    color: #95a5a6;
-    font-size: 0.9rem;
+    color: #64748B;
+    font-size: 13px;
+    margin-top: 10px;
 }
