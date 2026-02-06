@@ -37,10 +37,15 @@ function calcu() {
     var topott = (topotp * 0.4) + (topoctrl * 0.6);
     document.getElementById('topott').value = topott.toFixed(2);
 
+    // 6. Transer thermique
+    var tttd = Number(document.getElementById('tttd').value) || 0;
+    var ttctrl = Number(document.getElementById('ttctrl').value) || 0;
+    var anglaistt = (tttd * 0.4) + (ttctrl * 0.6);
+    document.getElementById('anglaistt').value = anglaistt.toFixed(2);
+    
     // 6. مواد أخرى بدون حساب مركب (ادخال مباشر)
     var pgctt = Number(document.getElementById('pgctt').value) || 0;
     var dessintt = Number(document.getElementById('dessintt').value) || 0;
-    var anglaistt = Number(document.getElementById('anglaistt').value) || 0;
     var geott = Number(document.getElementById('geott').value) || 0;
 
     // 7. MDC (مثال: 40% TP , 60% Controle حسب ما في الصفحة)
