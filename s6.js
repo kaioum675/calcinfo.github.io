@@ -55,7 +55,7 @@ function calcu() {
     document.getElementById('mdctt').value = mdctt.toFixed(2);
 
     // 8. حساب المعدل النهائي — الأوزان كما في ملفك الأصلي، المقسوم على 19 ككل
-    var somme = (hydtt * 2) + (batt * 2) + (rdmtt * 2) + (mdstt * 3) + (topott * 2) + (pgctt * 1) + (dessintt * 3) + (anglaistt * 1) + (mdctt * 2) + (geott * 1);
+    var somme = (hydtt * 2) + (batt * 2) + (rdmtt * 2) + (mdstt * 3) + (topott * 2) + (pgctt * 1) + (dessintt * 3) + (tttt * 1) + (mdctt * 2) + (geott * 1);
     var moyenneFinale = somme / 19;
 
     document.getElementById('toto').innerHTML = moyenneFinale.toFixed(2);
