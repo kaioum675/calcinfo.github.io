@@ -41,7 +41,7 @@ function calcu() {
     var tttd = Number(document.getElementById('tttd').value) || 0;
     var ttctrl = Number(document.getElementById('ttctrl').value) || 0;
     var tttt = (tttd * 0.4) + (ttctrl * 0.6);
-    document.getElementById('tttt').value = ttt.toFixed(2);
+    document.getElementById('tttt').value = tttt.toFixed(2);
     
     // 6. مواد أخرى بدون حساب مركب (ادخال مباشر)
     var pgctt = Number(document.getElementById('pgctt').value) || 0;
